@@ -94,7 +94,7 @@ Choose a different metric: http_server_requests_seconds_count - this will tell, 
 We can see that there were 3 endpoints touched. What if I want to see only one? We can see all the available labels for the time series' below.
 
 Example label: `uri=/training/store` like this we will have only the endpoint on API app. We can also choose operators, so
-we can do regex: `uri=~/message/\*` 
+we can do regex: `uri=~/message.*` 
 
 Scale up the API app: `kubectl scale deploy/api-spring-cubix -n cubix --replicas=2`
 
