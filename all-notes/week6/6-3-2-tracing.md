@@ -10,7 +10,7 @@ Modify the API application's Docker image:
 ADD --chown=1001 https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.20.2/opentelemetry-javaagent.jar opentelemetry.jar
 COPY --chown=1001 target/*.jar app.jar
 ENTRYPOINT [ "sh", "-c" ]
-CMD ["java -javaagent:/opt/app/opentelemetry.jar $JAVA_OPTS -jar app.jar"]
+CMD ["exec java -javaagent:/opt/app/opentelemetry.jar $JAVA_OPTS -jar app.jar"]
 ```
 
 We can see an example here, how can we download a file from the internet during an image build.
@@ -55,6 +55,6 @@ And because the configuration of Grafana is correct, this will be a link to Temp
 
 We can see the main points of the call, when did the control flow change, data was passed. We can see extension data, and running time.
 
-Search for this: http.status_code=500
+Search for this tag: `http.status_code` = `500`.
 
 We can see the failed call, and the exception that happened.

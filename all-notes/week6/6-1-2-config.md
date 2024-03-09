@@ -228,6 +228,12 @@ secret:
   secretKey: password
 ```
 
+Because of that, the setting of the environment variable in the GitHub Actions workflow file is no longer needed:
+
+```yaml
+          helm upgrade db spring-cubix --install -f db.yaml -n cubix
+```
+
 Deploy it locally - note that we will need the config file:
 
 ```shell
