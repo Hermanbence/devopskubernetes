@@ -18,6 +18,10 @@ datasources:
           matcherRegex: '"trace_id":"([\w\d]*)"'
           name: TraceID
           url: $${__value.raw}
+        - datasourceUid: cubix_tempo
+          matcherRegex: '"traceId":"([\w\d]*)"'
+          name: Trace_ID
+          url: $${__value.raw}
     version: 1
     editable: true
   - name: Tempo
