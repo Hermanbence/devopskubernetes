@@ -21,6 +21,8 @@ For the fifth week’s exercises the following steps must be done before the sta
   * the `dependencies` must be run only if it was never run before (but running it multiple times do no harm)
   * the `install` one will setup everything needed in our cluster
 * Wait a few minutes. The tools will be set up and bind together automatically.
+  * We will use Grafana, that will be available on this URL: http://grafana.cubix.localhost:8080
+  * The user and password will be both `admin`. As you use this only locally, you are not required to change the password after the first login.
 
 # Checking if everything is fine
 * Under /requirements/scripts/5-2-check-tools there are scripts for both [Windows](/requirements/scripts/5-2-check-tools/windows) and [MacOS/Linux](/requirements/scripts/5-2-check-tools/macos-linux) - open a terminal in the folder appropriate for your platform
