@@ -145,9 +145,9 @@ Check what happened in the background: `kubectl get replicaset` - we can see 2. 
 
 Rollback to the original version: `kubectl rollout undo deploy/nginx`. Check again the hello.txt.
 
-Check again the ReplicaSets: `kubectl get replicaset`. Check the history with revision numbers: `kubectl rollout history deploy/nginx --revision`
+Check again the ReplicaSets: `kubectl get replicaset`. Check the history with revision numbers: `kubectl rollout history deploy/nginx`
 
-Do a rollback again, with a direct revision number: `kubectl rollout undo deploy/nginx --to-revision=0`.
+Do a rollback again, with a direct revision number: `kubectl rollout undo deploy/nginx --to-revision=2`.
 
 Check again the hello.txt.
 
